@@ -7,9 +7,9 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/demo_db
-    username: demo_user
-    password: demo_pass
+    url: jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_7436f276e3bd7ba?reconnect=true
+    username: baaba420581f56
+    password: 52dff4e8
   jackson:
     serialization:
       write-dates-as-timestamps: false
