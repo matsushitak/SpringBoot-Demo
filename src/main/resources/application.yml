@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: springboot-demo
+  output:
+    ansi:
+      enabled: detect
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo_db
+    username: demo_user
+    password: demo_pass
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      write-durations-as-timestamps: true
+  # HTTP404エラーを返すために静的ファイルへのマッピングをオフにする
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+server:
+  port: 3030
+
+logging.file: demo.log
+logging:
+  file:
+    max-history: 10
+    max-size: 50MB
+  level:
+    root: info
+    org.springframework: info
+    org.hibernate: info
+    org.hibernate.SQL: debug
+    com.example.demo: debug
